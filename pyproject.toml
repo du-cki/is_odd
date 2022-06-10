@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "is-even"
+name = "is-odd"
 version = "0.1.0"
 description = "Yep"
-authors = ["Alex Nørgaard <Umbra@AbstractUmbra.dev>"]
+authors = ["le ducki3 <qwuakers@gmail.com>"]
 license = "The Unlicense"
 readme = "README.md"
-packages = [{include = "is_even"}]
+packages = [{include = "is_odd"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
