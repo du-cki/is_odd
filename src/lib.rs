@@ -8,8 +8,11 @@ pub async fn main(req: Request, env: Env, _ctx: worker::Context) -> Result<Respo
     router
         .get_async("/:number", |_, ctx| async move {
             if let Some(number) = ctx.param("number") {
-                if let Ok(num) = number.parse::<i32>() {
-                    return Response::from_json(&json!({ "number": num, "is_odd": num % 2 != 0 }))
+                if let Ok(num) = number.parse::<i64>() {
+                    return Response::from_json(&json!({
+                        "number": num,
+                        "is_odd": num % 2 != 0
+                    }))
                 }
             }
 
